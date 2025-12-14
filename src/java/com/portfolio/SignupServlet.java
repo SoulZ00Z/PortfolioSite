@@ -43,7 +43,7 @@ public class SignupServlet extends HttpServlet {
         }
         
         try {
-            // Check if guest exists.
+            // Check if guest ID exists.
             if (guestDAO.guestIDExists(guestId.trim())) {
                 request.setAttribute("errorMessage", "Guest ID exists!");
                 request.getRequestDispatcher("signup.jsp").forward(request, response);

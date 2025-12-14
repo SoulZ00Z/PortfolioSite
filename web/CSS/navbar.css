@@ -1,0 +1,119 @@
+/* Nav Bar Styles */
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+
+* {
+    font-family: 'Questrial', sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+#nav1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+#nav2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navbar-nav li {
+    margin: 0 15px;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar-nav a:hover {
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-nav a.active {
+    background-color: #404040;
+    color: white;
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 15px;
+}
+
+.navbar-user a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar-user a:hover {
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+}
+
+.cart-link {
+    background-color: #404040;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.cart-link:hover {
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+}

@@ -10,34 +10,13 @@
 	<title></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="CSS/navbar.css">
 	<link rel="stylesheet" href="CSS/info.css">
 </head>
 <body style="background-color: #f0f0f0;">
-	<nav>
-        <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; background-color: #333;">
-            <li style="margin: 0 15px;">
-                <a href="index.jsp" style="text-decoration: none; color: white; font-size: 1.2em;">HOME</a>
-            </li>
-            <li style="margin: 0 15px;">
-                <a href="project.jsp" style="text-decoration: none; color: white; font-size: 1.2em;">PROJECTS</a>
-            </li>
-            <li style="margin: 0 15px;">
-                <a href="info.jsp" style="text-decoration: none; color: white; font-size: 1.2em;">INFO</a>
-            </li>
-            <% if (showGuestTab) { %>
-            <li style="margin: 0 15px;">
-                <a href="guest.jsp" style="text-decoration: none; color: white; font-size: 1.2em;">GUEST</a>
-            </li>
-            <li style="margin: 0 15px;">
-                <a href="LogoutServlet" style="text-decoration: none; color: white; font-size: 1.2em;">LOGOUT</a>
-            </li>
-            <% } else { %>
-            <li style="margin: 0 15px;">
-                <a href="login.jsp" style="text-decoration: none; color: white; font-size: 1.2em;">LOGIN</a>
-            </li>
-            <% } %>
-        </ul>
-    </nav>
+	<jsp:include page="navbar.jsp">
+		<jsp:param name="page" value="info"/>
+	</jsp:include>
 	
 
 	<main>

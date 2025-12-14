@@ -1,5 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  
+  <!-- Spring Boot Parent - Version control for Spring Boot dependencies. -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.18</version>
+    <relativePath/>
+  </parent>
+  
   <groupId>com.portfolio</groupId>
   <artifactId>Portfolio</artifactId>
   <version>1.0.0</version>
@@ -9,16 +18,31 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
   </properties>
 
   <dependencies>
+    <!-- Spring Boot Web Starter - Spring MVC, Tomcat, etc. -->
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    
+    <!-- Spring Boot Starter Tomcat - Provided for WAR deployment. -->
+    <dependency>  
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
       <scope>provided</scope>
     </dependency>
 
+    <!-- Existing Servlet API (Included in Spring Boot, but keeping for reference.) -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Existing DB dependencies. -->
     <dependency>
       <groupId>net.sf.ucanaccess</groupId>
       <artifactId>ucanaccess</artifactId>
@@ -56,6 +80,11 @@
             <manifestFile>src/conf/MANIFEST.MF</manifestFile>
           </archive>
         </configuration>
+      </plugin>
+      <!-- Spring Boot Maven Plugin - Running with: mvn spring-boot:run . -->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
